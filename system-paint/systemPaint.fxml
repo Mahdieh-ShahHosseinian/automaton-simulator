@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="833.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="SystemPaint">
+    <bottom>
+        <HBox prefHeight="50.0" prefWidth="800.0" spacing="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="importButton" defaultButton="true" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#fileChooser"
+                        prefHeight="42.0" prefWidth="132.0" text="Import">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="drawButton" contentDisplay="CENTER" disable="true" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#draw" prefHeight="49.0"
+                        prefWidth="114.0" text="Draw">
+                    <HBox.margin>
+                        <Insets left="200.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets left="1.0"/>
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="5.0" top="5.0"/>
+            </padding>
+        </HBox>
+    </bottom>
+    <left>
+        <TextArea fx:id="showXML" cacheShape="false" centerShape="false" editable="false" focusTraversable="false"
+                  prefHeight="686.0" prefWidth="135.0" promptText="Your XML text file:" scaleShape="false">
+            <opaqueInsets>
+                <Insets top="1.0"/>
+            </opaqueInsets>
+            <font>
+                <Font name="Calibri" size="12.0"/>
+            </font>
+        </TextArea>
+
+    </left>
+    <top>
+        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+               maxWidth="1.7976931348623157E308" prefHeight="82.0" prefWidth="319.0"
+               style="-fx-background-color: #316879;" text="Automaton Simulator" textAlignment="CENTER"
+               textFill="#7fe7dc" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Tahoma" size="30.0"/>
+            </font>
+            <BorderPane.margin>
+                <Insets bottom="10.0"/>
+            </BorderPane.margin>
+            <effect>
+                <Glow/>
+            </effect>
+        </Label>
+    </top>
+    <center>
+        <Separator orientation="VERTICAL" prefHeight="410.0" prefWidth="0.0" visible="false"
+                   BorderPane.alignment="CENTER"/>
+    </center>
+    <padding>
+        <Insets left="5.0" right="5.0" top="5.0"/>
+    </padding>
+    <right>
+        <Pane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="682.0" prefWidth="1401.0" style="-fx-background-color: #ffffff;"
+              BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+        </Pane>
+    </right>
+</BorderPane>

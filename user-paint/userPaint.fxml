@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="1550.0"
+            style="-fx-background-color: #ced7d8;" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserPaint">
+    <top>
+        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+               maxWidth="1.7976931348623157E308" prefHeight="82.0" prefWidth="319.0"
+               style="-fx-background-color: #316879;" text="Automaton Simulator" textAlignment="CENTER"
+               textFill="#7fe7dc" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Tahoma" size="30.0"/>
+            </font>
+            <BorderPane.margin>
+                <Insets bottom="10.0"/>
+            </BorderPane.margin>
+            <effect>
+                <Glow/>
+            </effect>
+        </Label>
+    </top>
+    <padding>
+        <Insets bottom="5.0" right="5.0" top="5.0"/>
+    </padding>
+    <left>
+        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="715.0" prefWidth="114.0" spacing="40.0">
+            <children>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="72.0"
+                      prefWidth="114.0">
+                    <children>
+                        <Button fx:id="plusCircle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                minWidth="-Infinity" mnemonicParsing="false" onAction="#plusCircle" prefHeight="50.0"
+                                prefWidth="50.0" text="+">
+                            <HBox.margin>
+                                <Insets right="7.0" top="20.0"/>
+                            </HBox.margin>
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Button>
+                        <Circle fill="WHITE" radius="28.0" stroke="BLACK" strokeType="INSIDE"
+                                style="-fx-fill: #ced7d8;">
+                            <HBox.margin>
+                                <Insets top="17.0"/>
+                            </HBox.margin>
+                        </Circle>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="78.0"
+                      prefWidth="114.0">
+                    <children>
+                        <Button fx:id="plusTransition" disable="true" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusTrans"
+                                prefHeight="50.0" prefWidth="50.0" text="+">
+                            <HBox.margin>
+                                <Insets right="5.0" top="25.0"/>
+                            </HBox.margin>
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Button>
+                        <CubicCurve controlX1="10.0" controlX2="15.0" controlY1="-30.0" controlY2="35.0" endX="45.0"
+                                    endY="-3.0" fill="#f5f5f5" startX="-20.0" startY="7.0" stroke="BLACK"
+                                    strokeMiterLimit="1.0" style="-fx-fill: #ced7d8;">
+                            <HBox.margin>
+                                <Insets top="40.0"/>
+                            </HBox.margin>
+                        </CubicCurve>
+                    </children>
+                </HBox>
+                <HBox fx:id="transHBox" alignment="CENTER" disable="true" maxHeight="1.7976931348623157E308"
+                      maxWidth="1.7976931348623157E308" prefHeight="84.0" prefWidth="98.0">
+                    <children>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                               prefHeight="29.0" prefWidth="54.0" text="Label: ">
+                            <font>
+                                <Font name="Verdana" size="12.5"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="getTransLabel" cacheShape="false" focusTraversable="false"
+                                   maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                   pickOnBounds="false" prefHeight="34.0" prefWidth="64.0" promptText="      Ti"/>
+                    </children>
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets top="10.0"/>
+                    </VBox.margin>
+                </HBox>
+                <Button fx:id="saveButton" cancelButton="true" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#save" prefHeight="49.0"
+                        prefWidth="114.0" text="Save">
+                    <VBox.margin>
+                        <Insets top="280.0"/>
+                    </VBox.margin>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets left="10.0" top="10.0"/>
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <right>
+        <Pane fx:id="paper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="682.0" prefWidth="1401.0" style="-fx-background-color: #ffffff;"
+              BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </Pane>
+    </right>
+    <center>
+        <Separator maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                   mouseTransparent="true" orientation="VERTICAL" prefHeight="610.0" prefWidth="0.0" visible="false"
+                   BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>

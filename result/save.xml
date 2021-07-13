@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Automata Type="FA">
+    <Alphabets numberOfAlphabets="6">
+        <alphabet letter="0"/>
+        <alphabet letter="d"/>
+        <alphabet letter="f"/>
+        <alphabet letter="9"/>
+        <alphabet letter="."/>
+        <alphabet letter="/"/>
+    </Alphabets>
+    <States numberOfStates="4">
+        <state name="S0" positionX="17" positionY="14"/>
+        <state name="S1" positionX="21" positionY="47"/>
+        <state name="S2" positionX="56" positionY="19"/>
+        <state name="S3" positionX="57" positionY="55"/>
+        <initialState name="S0"/>
+        <FinalStates numberOfFinalStates="0"/>
+    </States>
+    <Transitions numberOfTrans="1">
+        <transition destination="S2" label="d,f,9,0,.,/" name="TR0" source="S0"/>
+    </Transitions>
+</Automata>

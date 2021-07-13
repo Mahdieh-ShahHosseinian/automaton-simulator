@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="725.0" prefWidth="1000.0" style="-fx-background-color: #ced7d8;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Options">
+    <center>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="554.0" prefWidth="438.0"
+              spacing="40.0" style="-fx-background-color: #7fe7dc;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="system" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                        mnemonicParsing="false" onAction="#loadSystemPaint" prefHeight="80.0" prefWidth="200.0"
+                        style="-fx-background-color: #316879;" text="Import" textFill="#7fe7dc">
+                    <font>
+                        <Font name="Verdana" size="30.0"/>
+                    </font>
+                    <effect>
+                        <Glow/>
+                    </effect>
+                </Button>
+                <Button fx:id="user" layoutX="484.0" layoutY="257.0" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadUserPaint"
+                        prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #316879;" text="Draw"
+                        textFill="#7fe7dc">
+                    <font>
+                        <Font name="Tahoma" size="30.0"/>
+                    </font>
+                    <effect>
+                        <Glow/>
+                    </effect>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+    <top>
+        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+               prefHeight="141.0" prefWidth="1000.0" style="-fx-background-color: #316879;" text="Automaton Simulator"
+               textFill="#7fe7dc" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Tahoma" size="50.0"/>
+            </font>
+            <effect>
+                <Glow/>
+            </effect>
+        </Label>
+    </top>
+    <padding>
+        <Insets top="5.0"/>
+    </padding>
+</BorderPane>
